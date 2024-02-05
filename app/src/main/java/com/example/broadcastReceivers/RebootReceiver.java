@@ -13,5 +13,6 @@ public class RebootReceiver extends BroadcastReceiver {
         SharedPreferences settings = context.getSharedPreferences("SharedPreferences",MODE_PRIVATE);
         SharedPreferences.Editor editor=settings.edit();
         editor.putInt("RebootNumber",(settings.getInt("RebootNumber",-1 )+1));
+        editor.commit();
     }
 }
